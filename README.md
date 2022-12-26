@@ -9,7 +9,7 @@ A Simple To-Do Web Application using Django Framework.
 * User Authentication
   * Multi-User login
   * Register, Login, Logout
-  * Edit User profile
+  * Edit User profile.
   * Change Password.
 ----------------------------------------------------
 ### Steps to follow for first time use open terminal/command prompt and execute this below commands
