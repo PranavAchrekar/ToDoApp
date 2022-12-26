@@ -12,7 +12,7 @@ A Simple ToDo Web Application using Django Framework.
   * Edit User profile.
   * Change Password.
 ----------------------------------------------------
-### Steps to follow for first time use open terminal/command prompt and execute this below commands
+### Steps to follow for first time use open terminal/command prompt and execute this below commands.
 
 1. Create a virtual environment.
 ~~~
