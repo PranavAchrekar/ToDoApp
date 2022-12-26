@@ -7,7 +7,7 @@ A Simple To-Do Web Application using Django Framework.
   * Create, Edit, Update, Delete Tasks
   * Can mark and view tasks as Completed/Incomplete.
 * User Authentication
-  * Multi-User login
+  * Multi-User login.
   * Register, Login, Logout.
   * Edit User profile.
   * Change Password.
