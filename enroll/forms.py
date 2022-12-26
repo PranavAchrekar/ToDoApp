@@ -20,7 +20,7 @@ class LoginForm(AuthenticationForm):
 
 class SignupForm(UserCreationForm):
 
-    # Below fields are used only for label sufffix, widget
+    # Below fields are used only for label sufffix, widget etc
     username = forms.CharField(label_suffix='', widget=forms.TextInput(attrs={'class':'form-control'}))
     first_name = forms.CharField(label_suffix='', widget= forms.TextInput(attrs={'class':'form-control'}))
     last_name = forms.CharField(label_suffix='', widget= forms.TextInput(attrs={'class':'form-control'}))
