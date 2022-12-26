@@ -26,7 +26,7 @@ A Simple ToDo Web Application using Django Framework.
 ~~~
    pip install django
 ~~~
-4. This will convert model class into sql statements
+4. This will convert model class into sql statements.
 ~~~
    python manage.py makemigrations
 ~~~
