@@ -1,0 +1,40 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-6 offset-3">
+        <!--Start for messages-->
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <div {% if message.tags %} class="{{message.tags}}"{% endif %}>
+                    <strong><i>{{message}} <button class='close' data-dismiss="alert">&#215;</button></i></strong>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        <!--End for messages-->
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="jumbotron bgc" >
+                <strong>{{form.as_p}}</strong>
+                <input type="submit" value="Update" class="btn btn-success">
+                <a href=" {% url 'addandshow' %}" type="button" class="btn btn-primary ">Home Page</a>
+                <br>
+        
+            </div>
+        </form>
+        
+        <!--Start of Non field errors-->      
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{error}}</p> 
+            {% endfor %}
+        {% endif %}     
+        <!--End of Non field errors-->
+
+    </div>
+</div>
+
+
+{% endblock content %}

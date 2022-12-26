@@ -1,0 +1,62 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-6 mr-auto ml-auto" >
+        <!--<h4 class="text-center alert alert-dark">Enter Tasks</h4>-->
+
+        <!--Start of messages-->
+        {% if messages %}
+            {% for message in messages %}
+                <p {% if message.tags %} class="alert alert-{{message.tags}} " {% endif %}><b>{{message}}</b><button class='close' data-dismiss="alert">&#215;</button></p>
+            {% endfor %}
+        {% endif %}
+        <!--End of messages-->
+
+        <!-- Start of Header username/ logout button-->
+        <div class="alert alert-info text-black bgc"> <strong><i><a href="{% url 'profile' %}" style="color:black">Hello {{request.user}}! </a> &nbsp; 
+            <i/> </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="{% url 'logout' %}" class="right"><b>Logout</b> </a>
+        </div>
+        <!-- End of Header username/ logout button-->
+
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            <div class="input-group">
+                {{form.title}}
+                  <button class="btn btn-dark bgc">&#43;</button>
+            </div>
+        </form>
+        <br>
+        {% if show %}
+            {% for data in show %}
+                <h4 class='form-control bgc' style =  "color:#07062d;"> 
+
+                    <!--Start of Edit button-->
+                    <a href=" {% url 'updatetask' data.id %} " style="text-decoration:none" type="button" class="btn-sm">&#9998;</a>
+                    <!--End of Edit button-->
+
+                    <!--Start of Delete Task button-->
+                    <form action=" {% url 'deletetask' data.id %} " method="post" class='d-inline'>
+                        {% csrf_token %}
+                        <button class='close'>&#215;</button>
+                    </form>    
+                    <!--End of Delete Task button-->
+                    
+                    <!--Start of Displaying Task-->
+                    {% if data.completed == True %}
+                        <strike><i>{{data.title}}</i></strike>
+                    {% else %}
+                        {{data.title}}
+                    {% endif %}
+                    <!--End of Displaying Task-->
+                </h4>
+            {% endfor %}
+        {% else %}
+            <h4>No Records</h4>
+        {% endif %}
+    </div>
+</div>
+
+   
+{% endblock content %}

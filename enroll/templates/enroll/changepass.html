@@ -1,0 +1,46 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-6 mr-auto ml-auto">
+        <h6 class=" text-center alert alert-info bgc " style="color:black" ><b><i>Hi {{request.user}}, &nbsp;&nbsp; You can change your password here</i></b></h6>
+        <div class="container bgc">
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+
+                <!--Start of display form fields-->
+                <div class="form-group" > 
+                {% for fm in  form %}
+                    {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}} </small><br> 
+                {% endfor %}
+                </div> 
+                <!--End of display form fields-->
+                <input type="submit" value="Save" class="btn btn-success mb-2">
+                <a href="{% url 'profile' %} " type='button' class="btn btn-primary mb-2">Back</a>
+
+                 <!--Start of non field errors -->
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors  %}
+                        <p class="alert alert-danger my-3">{{errors}}</p>
+                    {% endfor %}
+                {% endif %}
+                <!--End of non field errors -->
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

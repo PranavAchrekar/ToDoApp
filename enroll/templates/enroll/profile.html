@@ -1,0 +1,56 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-6 mr-auto ml-auto">
+        <h6 class="alert alert-info bgc" style="color:black"> <i> <b>Edit your profile here.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;</b></i><a href=" {% url 'changepass' %}" style="color:black"><b><i>Change Password</i></b></a></h6>
+        
+        <!--Start of messages for edit profile-->
+        {% if messages %}
+            {% for message in messages %}
+                <p {% if message.tags %} class="alert alert-{{message.tags}} border border-dark" {% endif %}><b>{{message}}</b><button class='close' data-dismiss="alert">&#215;</button></p>
+            {% endfor %}
+        {% endif %}
+        <!--End of messages for edit profile-->
+
+        <div class="container bgc">
+        <!--Start of UserChange Form-->    
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+
+            <!--Start of display form fields-->
+            <div class="form-group" > 
+            {% for fm in  form %}
+                {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}} </small><br> 
+            {% endfor %}
+            </div> 
+            <input type="submit" value="Save" class="btn btn-success mb-2">
+            <a href=" {% url 'addandshow' %} " type="button" class="btn btn-danger mb-2">Home Page</a>
+            <!--End of display form fields-->
+
+            <!--Start of non field errors -->
+            {% if form.non_field_errors %}
+                {% for error in form.non_field_errors  %}
+                <p class="alert alert-danger my-3">{{errors}}</p>
+                {% endfor %}
+            {% endif %}
+            <!--End of non field errors -->
+        </form>
+         <!--End of UserChange Form-->  
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href=" {% static 'enroll/css/bootstrap.css' %} ">
+    <link rel="stylesheet" href=" {% static 'enroll/css/style.css' %} ">
+</head>
+<body style="background-color: rgb(38 38 38);">
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-sm-6 mr-auto ml-auto">
+                <h4 class=" text-white text-center alert alert-dark border border-dark bgc"><i>ToDo Application</i></h4>
+            </div>
+        </div>
+        {% block content %} {% endblock content %}
+    </div>
+
+    
+
+    <script src=" {% static 'enroll/js/jquery.js' %} "></script>
+    <script src=" {% static 'enroll/js/pooper.js' %} "></script>
+    <script src=" {% static 'enroll/js/bootstrap.js' %} "></script>
+</body>
+</html>
