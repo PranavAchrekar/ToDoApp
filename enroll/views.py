@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 
 
-# This function is for Add data and Show Data for todo
+# This function is for Add data and Show Data for todo app
 def add_show(request):
     if request.user.is_authenticated: 
         user = request.user 
