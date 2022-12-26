@@ -3,7 +3,7 @@ A Simple To-Do Web Application using Django Framework.
 --------------------------------------------------------
 ### Features
 * This `todo app` is designed using function based views in `django`.
-* User can perform basic operations like
+* User can perform basic operations like.
   * Create, Edit, Update, Delete Tasks.
   * Can mark and view tasks as Completed/Incomplete.
 * User Authentication
