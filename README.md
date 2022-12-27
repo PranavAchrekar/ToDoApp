@@ -22,7 +22,7 @@ A Simple ToDo Web Application using Django Framework
 ~~~
    .\env\Scripts\activate
 ~~~
-3. Install all the dependencies
+3. Install all the dependencies.
 ~~~
    pip install -r requirements.txt
 ~~~
