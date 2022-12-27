@@ -39,7 +39,7 @@ A Simple ToDo Web Application using Django Framework
    python manage.py createsuperuser
 ~~~
 --------------------------------------------------
-Preview
+Preview.
 
 [ToDo_Web_App.webm](https://user-images.githubusercontent.com/64123078/209545137-2059e2bf-2be8-404d-8a6e-4fa3c3a916da.webm)
 
