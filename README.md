@@ -22,9 +22,9 @@ A Simple ToDo Web Application using Django Framework
 ~~~
    .\env\Scripts\activate
 ~~~
-3. Install Django.
+3. Install all the dependencies
 ~~~
-   pip install django
+   pip install -r requirements.txt
 ~~~
 4. This will convert model class into sql statements.
 ~~~
