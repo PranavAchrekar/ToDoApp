@@ -1,7 +1,7 @@
 # ToDo_App [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 A Simple ToDo Web Application using Django Framework
 --------------------------------------------------------
-### Features
+### Features:
 * This `todo app` is designed using function based views in `django`.
 * User can perform basic operations like.
   * Create, Edit, Update, Delete Tasks.
