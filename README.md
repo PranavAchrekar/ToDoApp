@@ -18,7 +18,7 @@ A Simple ToDo Web Application using Django Framework
 ~~~
    py -m venv env
 ~~~
-2. Activate virtual environment.
+2. Activate virtual environment
 ~~~
    .\env\Scripts\activate
 ~~~
