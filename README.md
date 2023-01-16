@@ -36,7 +36,7 @@ A Simple ToDo Web Application using Django Framework
 ~~~
 6. Create an admin user for admin panel.
 ~~~
-   python manage.py createsuperuser
+   python manage.py createsuperuser.
 ~~~
 --------------------------------------------------
 Preview!
